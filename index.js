@@ -17,6 +17,16 @@ const app = express();
 const mongoUrl = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
 const cors = require('cors');
 
+console.log('configs:');
+console.log('MONGO_USER:', MONGO_USER);
+console.log('MONGO_PASSWORD:', MONGO_PASSWORD);
+console.log('MONGO_IP:', MONGO_IP);
+console.log('MONGO_PORT:', MONGO_PORT);
+console.log('REDIS_URL:', REDIS_URL);
+console.log('REDIS_PORT:', REDIS_PORT);
+console.log('SESSION_SECRET:', SESSION_SECRET);
+console.log('mongoUrl:', mongoUrl);
+
 //////////////////
 
 const session = require("express-session");
