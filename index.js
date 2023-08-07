@@ -65,6 +65,7 @@ app.use(
 
 const connectWithRetry = () => {
     console.log('connecting ...');
+    console.log('mongoUrl: ', mongoUrl);
     mongoose.connect(mongoUrl, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
