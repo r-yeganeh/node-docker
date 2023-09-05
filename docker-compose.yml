@@ -7,15 +7,13 @@ services:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
   node-app:
     build: .
+    image: 192.168.1.51:8083/node-app
     environment:
       - PORT=3000
     depends_on:
       - mongo
   mongo:
     image: mongo:4.4
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=reza
-      - MONGO_INITDB_ROOT_PASSWORD=password
     volumes:
       - mongo-db:/data/db
   redis:
